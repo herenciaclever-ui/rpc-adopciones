@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Menú superior -->
+    <header>
+    <!-- Logo a la IZQUIERDA -->
+    <h2>RPC</h2>
+    
+    <!-- Navegación en el CENTRO -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="perros.html">Perros en adopción</a>
+        <a href="como-adoptar.html">Cómo adoptar</a>
+        <a href="donar.html">Donaciones</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <!-- Botón Login a la DERECHA (FUERA del nav) -->
+    <div class="header-login-right">
+        <a href="login.html" class="btn-login-circular" title="Iniciar Sesión">
+            <span>👤</span>
+        </a>
+    </div>
+</header>>
+
+    <!-- Sección de Login como fondo completo -->
+    <section id="login-section" class="login-section" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;">
+        <div class="login-center-container">
+            <!-- Tarjeta de Login -->
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>Iniciar Sesión</h1>
+                    <p>Accede a tu cuenta RPC</p>
+                </div>
+
+                <form id="form-login">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span class="checkmark"></span>
+                            Recordar sesión
+                        </label>
+                        <a href="#olvide-contrasena" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Iniciar Sesión</button>
+
+                    <div class="login-divider">
+                        <span>o continúa con</span>
+                    </div>
+
+                    <button type="button" class="btn-google">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjUxIDkuMjA0NTVWOS4zMDA0NUg5LjE4VjEwLjc1MDQ1SDEzLjQ5QzEzLjA4IDEyLjQ1MDUgMTEuNTMgMTMuNjAwNSA5LjE4IDEzLjYwMDVDNi40MiAxMy42MDA1IDQuMTggMTEuMzYwNSA0LjE4IDguNjAwNDVDNC4xOCA1Ljg0MDQ1IDYuNDIgMy42MDA0NSA5LjE4IDMuNjAwNDVDMTAuNjggMy42MDA0NSAxMi4wMyA0LjI0MDQ1IDEzLjAxIDUuMjYwNDVMMTQuODIgMy40NTA0NUMxMy4yOCAxLjk5MDQ1IDExLjM0IDEuMTAwNDUgOS4xOCAxLjEwMDQ1QzUuMTUgMS4xMDA0NSAxLjg1IDQuNDAwNDUgMS44NSA4LjYwMDQ1QzEuODUgMTIuODAwNSA1LjE1IDE2LjEwMDUgOS4xOCAxNi4xMDA1QzEyLjg2IDE2LjEwMDUgMTUuODggMTMuNDUwNSAxNS44OCA5LjMwMDQ1QzE1Ljg4IDguODAwNDUgMTUuODMgOC4zNTA0NSAxNS43NCA3LjkyMDQ1TDE2LjUxIDcuOTIwNDVWOS4yMDQ1WiIgZmlsbD0iIzQyODVGMyIvPgo8L3N2Zz4K" alt="Google">
+                        Google
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <p>¿No tienes una cuenta? <a href="registro.html" class="register-link">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Olvidé Contraseña -->
+    <div id="modal-olvide-contrasena" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Recuperar Contraseña</h3>
+            <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+            <form id="form-recuperar">
+                <div class="form-group">
+                    <input type="email" placeholder="tu@email.com" required>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Enlace</button>
+            </form>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 RPC - Rescatando Patitas Cusco</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/yeltsin.colonioquispw?locale=es_LA" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://wa.me/+51992987044" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    // Formulario de login
+    document.getElementById("form-login").onsubmit = (e) => {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        if (email && password) {
+            alert('¡Inicio de sesión exitoso! Redirigiendo...');
+        } else {
+            alert('Por favor completa todos los campos');
+        }
+    };
+
+    // ===== MODAL RECUPERACIÓN CONTRASEÑA =====
+    const modalOlvide = document.getElementById("modal-olvide-contrasena");
+    const linkOlvide = document.querySelector(".forgot-password");
+    const closeOlvide = modalOlvide.querySelector(".close");
+
+    // Asegurar que el modal esté OCULTO al cargar
+    modalOlvide.style.display = "none";
+
+    // Abrir modal al hacer clic en "¿Olvidaste tu contraseña?"
+    linkOlvide.onclick = (e) => {
+        e.preventDefault();
+        modalOlvide.style.display = "flex";
+        document.body.classList.add('modal-open');
+    };
+
+    // Cerrar modal con la X
+    closeOlvide.onclick = () => {
+        modalOlvide.style.display = "none";
+        document.body.classList.remove('modal-open');
+    };
+
+    // Cerrar modal al hacer clic fuera
+    window.onclick = (event) => {
+        if (event.target === modalOlvide) {
+            modalOlvide.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+    };
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modalOlvide.style.display === "flex") {
+            modalOlvide.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+    });
+
+    // Manejar envío del formulario de recuperación
+    document.getElementById("form-recuperar").onsubmit = (e) => {
+        e.preventDefault();
+        alert('¡Enlace de recuperación enviado! Revisa tu correo electrónico.');
+        modalOlvide.style.display = "none";
+        document.body.classList.remove('modal-open');
+    };
+});
+    </script>
+
+    <style>
+    /* ===== ESTILOS PARA LOGIN CENTRADO CON FONDO ===== */
+    .login-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    .login-center-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Tarjeta de Login */
+    .login-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 450px;
+        animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .login-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .login-header h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .login-header p {
+        color: #666;
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-group input:focus {
+        border-color: #4CAF50;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        background: white;
+    }
+
+    /* Opciones del formulario */
+    .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .checkbox-container input {
+        margin-right: 8px;
+    }
+
+    .forgot-password {
+        color: #4CAF50;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .forgot-password:hover {
+        color: #45a049;
+        text-decoration: underline;
+    }
+
+    /* Botones */
+    .btn-login {
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btn-login:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    }
+
+    /* Divisor */
+    .login-divider {
+        text-align: center;
+        margin: 25px 0;
+        position: relative;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .login-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e0e0e0;
+    }
+
+    .login-divider span {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 0 15px;
+        position: relative;
+    }
+
+    /* Botón Google */
+    .btn-google {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        background: white;
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-google:hover {
+        border-color: #4285F4;
+        background: #f8f9fa;
+        transform: translateY(-1px);
+    }
+
+    .btn-google img {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Footer del login */
+    .login-footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .login-footer p {
+        color: #666;
+        margin: 0;
+    }
+
+    .register-link {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .register-link:hover {
+        text-decoration: underline;
+    }
+
+    /* ===== BOTÓN CIRCULAR LOGIN EN HEADER ===== */
+    .header-login {
+        margin-left: auto;
+    }
+
+    .btn-login-circular {
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .btn-login-circular:hover {
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .login-card {
+            padding: 40px 25px;
+            margin: 20px;
+        }
+        
+        .login-header h1 {
+            font-size: 2em;
+        }
+        
+        .form-options {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .login-card {
+            padding: 30px 20px;
+        }
+        
+        .login-header h1 {
+            font-size: 1.8em;
+        }
+    }
+    </style>
+
+    <script type="module">
+  // ... (código de configuración firebase) ...
+  import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+  // Login de usuario
+  document.getElementById('form-login').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("¡Inicio de sesión exitoso!");
+      window.location.href = "index.html";
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+</script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD2fngmx_vLtngEyI0OdFHW3MNdkby2m3Q",
+    authDomain: "rpc-rescatando-patitas-cusco.firebaseapp.com",
+    projectId: "rpc-rescatando-patitas-cusco",
+    storageBucket: "rpc-rescatando-patitas-cusco.firebasestorage.app",
+    messagingSenderId: "952270529576",
+    appId: "1:952270529576:web:28640e6aa4136d1442411d",
+    measurementId: "G-RN45L1R23F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+</body>
+</html>

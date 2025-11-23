@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Adopción - RPC</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+    <!-- Logo a la IZQUIERDA -->
+    <h2>RPC</h2>
+    
+    <!-- Navegación en el CENTRO -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="perros.html">Perros en adopción</a>
+        <a href="como-adoptar.html">Cómo adoptar</a>
+        <a href="donar.html">Donaciones</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <!-- Botón Login a la DERECHA (FUERA del nav) -->
+    <div class="header-login-right">
+        <a href="login.html" class="btn-login-circular" title="Iniciar Sesión">
+            <span>👤</span>
+        </a>
+    </div>
+</header>
+
+    <section id="form-adopcion">
+        <h2>Formulario de Adopción</h2>
+        <form>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
+
+            <label for="motivo">Motivo de adopción:</label>
+            <textarea id="motivo" rows="3" required></textarea>
+
+            <label for="condiciones">Condiciones de vivienda:</label>
+            <textarea id="condiciones" rows="3" required></textarea>
+
+            <label for="experiencia">Experiencia con mascotas:</label>
+            <textarea id="experiencia" rows="3" required></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 RPC - Rescatando Patitas Cusco</p>
+    </footer>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD2fngmx_vLtngEyI0OdFHW3MNdkby2m3Q",
+    authDomain: "rpc-rescatando-patitas-cusco.firebaseapp.com",
+    projectId: "rpc-rescatando-patitas-cusco",
+    storageBucket: "rpc-rescatando-patitas-cusco.firebasestorage.app",
+    messagingSenderId: "952270529576",
+    appId: "1:952270529576:web:28640e6aa4136d1442411d",
+    measurementId: "G-RN45L1R23F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Menú superior -->
+    <header>
+    <!-- Logo a la IZQUIERDA -->
+    <h2>RPC</h2>
+    
+    <!-- Navegación en el CENTRO -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="perros.html">Perros en adopción</a>
+        <a href="como-adoptar.html">Cómo adoptar</a>
+        <a href="donar.html">Donaciones</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <!-- Botón Login a la DERECHA (FUERA del nav) -->
+    <div class="header-login-right">
+        <a href="login.html" class="btn-login-circular" title="Iniciar Sesión">
+            <span>👤</span>
+        </a>
+    </div>
+</header>
+
+    <!-- Banner de Contacto -->
+    <section class="banner" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+        <h1>Contáctanos</h1>
+        <p>Estamos aquí para ayudarte y responder tus preguntas</p>
+    </section>
+
+    <!-- Sección de Información de Contacto -->
+    <section id="info-contacto" class="seccion-contacto">
+        <div class="container">
+            <div class="grid-contacto">
+                <!-- Información del Refugio -->
+                <div class="info-refugio">
+                    <h2>Rescatando Patitas Cusco</h2>
+                    <p>Somos una organización sin fines de lucro dedicada al rescate, cuidado y adopción de perritos en situación de abandono en Cusco.</p>
+                    
+                    <div class="detalles-contacto">
+                        <div class="contacto-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. de la Cultura 123<br>Cusco, Perú</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+51 984 123 456</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@rpcusco.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item">
+                            <span class="icon">🕒</span>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+                                   Sábados: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="formulario-contacto">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form id="form-contacto">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona el asunto</option>
+                                <option value="adopcion">Consulta sobre Adopción</option>
+                                <option value="donacion">Información sobre Donaciones</option>
+                                <option value="voluntariado">Quiero ser Voluntario</option>
+                                <option value="reporte">Reportar un Perrito en Situación de Calle</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa de Ubicación -->
+    <section id="mapa" class="seccion-mapa">
+        <div class="container">
+            <h2>Nuestra Ubicación</h2>
+            <div class="mapa-container">
+                <!-- Mapa de Google Maps (puedes reemplazar con embed real) -->
+                <div class="mapa-placeholder">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Cusco,Peru&zoom=13&size=600x400&markers=color:red%7Clabel:RPC%7CCusco,Peru&key=YOUR_API_KEY" 
+                         alt="Mapa de ubicación de RPC Cusco" 
+                         style="width: 100%; height: 400px; border-radius: 10px;">
+                    <p class="mapa-nota">📍 Av. de la Cultura 123, Cusco, Perú</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section id="faq" class="seccion-faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Cómo puedo adoptar un perrito?</h3>
+                    <p>Puedes visitar nuestra sección de "Perros en adopción" para conocer a nuestros peluditos y seguir el proceso de adopción descrito en "Cómo adoptar".</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Aceptan voluntarios?</h3>
+                    <p>¡Sí! Siempre necesitamos ayuda. Puedes contactarnos para ser voluntario en eventos, paseos o cuidado de los perritos.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Qué tipo de donaciones aceptan?</h3>
+                    <p>Aceptamos donaciones monetarias, comida, medicinas, mantas, juguetes y otros insumos. Visita nuestra página de donaciones para más información.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Puedo visitar el refugio?</h3>
+                    <p>Sí, puedes visitarnos en nuestro horario de atención. Te recomendamos contactarnos antes para coordinar tu visita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 RPC - Rescatando Patitas Cusco</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/yeltsin.colonioquispw?locale=es_LA" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://wa.me/+51992987044" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Manejar envío del formulario de contacto
+        document.getElementById("form-contacto").onsubmit = (e) => {
+            e.preventDefault();
+            
+            // Aquí iría la lógica para enviar el formulario
+            // Por ahora solo mostramos un mensaje
+            alert("¡Gracias por tu mensaje! Te contactaremos pronto.");
+            
+            // Limpiar el formulario
+            e.target.reset();
+        };
+    });
+    </script>
+
+    <style>
+    /* ===== ESTILOS PARA CONTACTO ===== */
+    .seccion-contacto {
+        padding: 60px 20px;
+        background: #9692b1;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+    }
+
+    /* Información del Refugio */
+    .info-refugio h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .info-refugio > p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+
+    .detalles-contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contacto-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .contacto-item .icon {
+        font-size: 24px;
+        background: #323a32;
+        color: rgb(213, 178, 97);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .contacto-item h4 {
+        color: #333;
+        margin: 0 0 5px 0;
+        font-size: 1.1em;
+    }
+
+    .contacto-item p {
+        color: #666;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Formulario de Contacto */
+    .formulario-contacto {
+        background: rgb(85, 169, 214);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .formulario-contacto h2 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e4a758;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #0a0566;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    }
+
+    .btn-enviar {
+        background: #130234;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .btn-enviar:hover {
+        background: #4b45a0;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    /* Mapa */
+    .seccion-mapa {
+        padding: 60px 20px;
+        background: rgb(160, 225, 224);
+    }
+
+    .seccion-mapa h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+
+    .mapa-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .mapa-nota {
+        text-align: center;
+        color: #666;
+        margin-top: 15px;
+        font-style: italic;
+    }
+
+    /* FAQ */
+    .seccion-faq {
+        padding: 60px 20px;
+        background: #90d790;
+    }
+
+    .seccion-faq h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .faq-item {
+        background: rgb(210, 233, 147);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+        color: #091609;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+
+    .faq-item p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .grid-contacto {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .formulario-contacto {
+            padding: 30px 20px;
+        }
+        
+        .faq-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+
+    <script type="module">
+  // ... (código de configuración firebase) ...
+  import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  // Formulario de contacto
+  document.getElementById('form-contacto').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = {
+      nombre: document.getElementById('nombre').value,
+      email: document.getElementById('email').value,
+      telefono: document.getElementById('telefono').value,
+      asunto: document.getElementById('asunto').value,
+      mensaje: document.getElementById('mensaje').value,
+      fecha: new Date(),
+      leido: false
+    };
+    
+    try {
+      await addDoc(collection(db, "mensajes"), formData);
+      alert("¡Mensaje enviado! Te responderemos pronto.");
+      this.reset(); // Limpiar formulario
+    } catch (error) {
+      alert("Error al enviar mensaje: " + error.message);
+    }
+  });
+</script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD2fngmx_vLtngEyI0OdFHW3MNdkby2m3Q",
+    authDomain: "rpc-rescatando-patitas-cusco.firebaseapp.com",
+    projectId: "rpc-rescatando-patitas-cusco",
+    storageBucket: "rpc-rescatando-patitas-cusco.firebasestorage.app",
+    messagingSenderId: "952270529576",
+    appId: "1:952270529576:web:28640e6aa4136d1442411d",
+    measurementId: "G-RN45L1R23F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

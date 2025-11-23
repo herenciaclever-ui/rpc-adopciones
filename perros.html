@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC - Perros en Adopción</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Menú superior -->
+    <header>
+    <!-- Logo a la IZQUIERDA -->
+    <h2>RPC</h2>
+    
+    <!-- Navegación en el CENTRO -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="perros.html">Perros en adopción</a>
+        <a href="como-adoptar.html">Cómo adoptar</a>
+        <a href="donar.html">Donaciones</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <!-- Botón Login a la DERECHA (FUERA del nav) -->
+    <div class="header-login-right">
+        <a href="login.html" class="btn-login-circular" title="Iniciar Sesión">
+            <span>👤</span>
+        </a>
+    </div>
+</header>
+
+    <!-- Perros en adopcion -->
+<section id="perros-adopcion">
+    <h2>Perros en adopción</h2>
+    
+    <div class="cards-container">
+        <!-- tarjeta 1 -->    
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS4jW4paZT2lKZwbSznv4rbZ6IwYpxt0wb2g&s" alt="perro1">
+            <h3>Rocky</h3>
+            <p>Edad: 10 meses</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Mediano</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Rescatado de la calle, busca un hogar amoroso.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 2 -->    
+        <div class="card">
+            <img src="data:image/jpeg;base64,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" alt="perro2">
+            <h3>Arturito</h3>
+            <p>Edad: 8 meses</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Pequeño</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Encontrado en la plaza central, muy juguetón.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 3 -->    
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBsyDdBkgDHpbkio6EkKbd3W3Gzf-hSkOiHg&s" alt="perro3">
+            <h3>Max</h3>
+            <p>Edad: 1 año</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Grande</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Rescatado de un accidente, muy cariñoso y activo.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 4 -->    
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV4BTDXxgpdZRFmQsTmKSVC2XoNHTLbYWJsA&s" alt="perro4">
+            <h3>Bruno</h3>
+            <p>Edad: 3 años</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Mediano</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Adoptado</p>
+                <p>Historia: Siempre ha sido un perro de compañía, muy leal.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 5 -->    
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKOI2W17bZOtOlOObog_0opV6gVt3a_f2oeA&s" alt="perro5">
+            <h3>Mila</h3>
+            <p>Edad: 5 meses</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Pequeño</p>
+                <p>Sexo: Hembra</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Muy juguetona, encontrada en un parque, busca hogar.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 6 -->    
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="perro6">
+            <h3>Toby</h3>
+            <p>Edad: 4 años</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Grande</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Perro calmado y cariñoso, rescatado de un refugio.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 7 -->
+        <div class="card">
+            <img src="https://scontent.fcuz2-1.fna.fbcdn.net/v/t39.30808-6/515757006_3068292766677569_8748561735050126044_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEh49eW-Pbpz3PZx9mhYARbMQgqZVEwiSYxCCplUTCJJvli7uZvti1Oen4EBtBXWBDSnRel709myKHw2QSRKq6g&_nc_ohc=k2AG2ccJmJAQ7kNvwGauW94&_nc_oc=Adnvw0WgmOiJQJX0rlBZjNq52biKLsrBgwT1N5cGVO7kHXmApPINj5ZSQh1_mUiSfxw&_nc_zt=23&_nc_ht=scontent.fcuz2-1.fna&_nc_gid=NhA3KRtnwqlQg45gZO6idw&oh=00_Afimx6j2p0ECEtdcoUrEEgCBi3VitufKDPxdu8BBnkh20w&oe=6921E5BD" alt="perro7">
+            <h3>Antonella</h3>
+            <p>Edad: 2 años</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Mediano</p>
+                <p>Sexo: Hembra</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Muy cariñosa, busca familia responsable que cuiden de su hija .</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 8 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8uvGzXgv4OMhwlbTzwcZRqHWWVjRl7nMHQ&s" alt="perro8">
+            <h3>Simba</h3>
+            <p>Edad: 1 año</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Grande</p>
+                <p>Sexo: Macho</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Juguetón y activo, encontrado en la calle.</p>
+            </div>
+        </div>
+
+        <!-- tarjeta 9 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8" alt="perro9">
+            <h3>Coco</h3>
+            <p>Edad: 6 meses</p>
+            <button class="ver-mas-btn">Ver más</button>
+            <button class="adoptar-btn">Adoptar</button>
+            <div class="info-extra">
+                <p>Tamaño: Pequeño</p>
+                <p>Sexo: Hembra</p>
+                <p>Estado: Disponible</p>
+                <p>Historia: Muy amigable, ideal para departamento.</p>
+            </div>
+        </div>
+
+        <!-- tarjetas 10 a 18 -->
+        <!-- Puedes repetir la misma estructura cambiando nombres, edades, fotos y historias -->
+        <!-- Por ejemplo: Fido, Rocky2, Bella, Toby2, Max2, etc. -->
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 RPC - Rescatando Patitas Cusco</p>
+    </footer>
+
+    <script>
+            const botones = document.querySelectorAll('.ver-mas-btn');
+
+        botones.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const info = boton.parentElement.querySelector('.info-extra'); // busca dentro de la tarjeta
+                if (info.style.display === 'block') {
+                    info.style.display = 'none';
+                    boton.textContent = 'Ver más';
+                } else {
+                    info.style.display = 'block';
+                    boton.textContent = 'Ver menos';
+                }
+            });
+        });
+        // Adoptar
+    const adoptarBtns = document.querySelectorAll('.adoptar-btn');
+    adoptarBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Redirige a adopcion.html
+            window.location.href = "adopcion.html";
+        });
+    });
+    </script>
+    <!-- ANTES del cierre de </body> -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD2fngmx_vLtngEyI0OdFHW3MNdkby2m3Q",
+    authDomain: "rpc-rescatando-patitas-cusco.firebaseapp.com",
+    projectId: "rpc-rescatando-patitas-cusco",
+    storageBucket: "rpc-rescatando-patitas-cusco.firebasestorage.app",
+    messagingSenderId: "952270529576",
+    appId: "1:952270529576:web:28640e6aa4136d1442411d",
+    measurementId: "G-RN45L1R23F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<script type="module">
+  // ... (código de configuración firebase de arriba) ...
+  
+  // Función para enviar solicitud de adopción
+  async function enviarSolicitudAdopcion(nombrePerro, datosUsuario) {
+    try {
+      // Agregar documento a la colección "solicitudes"
+      await addDoc(collection(db, "solicitudes"), {
+        perro: nombrePerro,
+        usuario: datosUsuario,
+        fecha: new Date(),
+        estado: "pendiente",
+        timestamp: Date.now()
+      });
+      alert("¡Solicitud de adopción enviada! Te contactaremos pronto.");
+    } catch (error) {
+      console.error("Error al enviar solicitud:", error);
+      alert("Error al enviar la solicitud. Intenta nuevamente.");
+    }
+  }
+
+  // Asignar evento a botones "Adoptar"
+  document.addEventListener('DOMContentLoaded', function() {
+    const botonesAdoptar = document.querySelectorAll('.adoptar-btn');
+    
+    botonesAdoptar.forEach(boton => {
+      boton.addEventListener('click', function() {
+        const nombrePerro = this.closest('.card').querySelector('h3').textContent;
+        const datosUsuario = {
+          nombre: prompt("Ingresa tu nombre:"),
+          email: prompt("Ingresa tu email:"),
+          telefono: prompt("Ingresa tu teléfono:")
+        };
+        
+        if (datosUsuario.nombre && datosUsuario.email) {
+          enviarSolicitudAdopcion(nombrePerro, datosUsuario);
+        }
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
